@@ -1,7 +1,17 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logout, reset } from "../features/authSlice";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.auth);
+  const logoutx = () => {
+    dispatch(logout());
+    dispatch(reset());
+    navigate("/");
+  };
   return (
     <div className="fixed bg-gray-200 w-[10%] h-screen">
       <div className="flex p-1 w-full items-center ">
@@ -21,7 +31,9 @@ const Sidebar = () => {
           </NavLink>
 
           <div className="font-bold">Settings</div>
-          <div className="pl-4">Logout</div>
+          <div className="pl-4">
+            <button onClick={() => logoutx()}>Logout</button>
+          </div>
         </div>
       </div>
     </div>
