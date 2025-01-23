@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import Layout from "./Layout";
-import FormAddUser from "../components/FormAddUser";
+import Forbidden from "../components/Forbidden";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getMe } from "../features/authSlice";
-const AddUser = () => {
+const Fbpages = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { user, isError } = useSelector((state) => state.auth);
+  const { isError } = useSelector((state) => state.auth);
 
   useEffect(() => {
     dispatch(getMe());
@@ -17,15 +17,12 @@ const AddUser = () => {
     if (isError) {
       navigate("/");
     }
-    if (user && user.role !== "admin") {
-      navigate("/404");
-    }
-  }, [isError, navigate, user]);
+  }, [isError, navigate]);
   return (
     <Layout>
-      <FormAddUser />
+      <Forbidden />
     </Layout>
   );
 };
 
-export default AddUser;
+export default Fbpages;

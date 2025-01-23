@@ -13,7 +13,7 @@ const Sidebar = () => {
     navigate("/");
   };
   return (
-    <div className="fixed bg-gray-200 w-[10%] h-screen">
+    <div className="fixed bg-gray-200 w-[10%] h-screen mt-16 ">
       <div className="flex p-1 w-full items-center ">
         <div className="p-4 items-center justify-start gap-4 ">
           <div className="font-bold">General</div>

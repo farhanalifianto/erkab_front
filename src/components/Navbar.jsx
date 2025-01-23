@@ -14,7 +14,7 @@ const Navbar = () => {
     navigate("/");
   };
   return (
-    <nav className="bg-gray-800">
+    <nav className="fixed w-full bg-gray-800 ">
       <div className="max-w-7xl mx-auto px-2">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
