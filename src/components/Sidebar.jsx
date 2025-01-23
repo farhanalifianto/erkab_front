@@ -25,10 +25,15 @@ const Sidebar = () => {
             <div className="pl-4">Products</div>
           </NavLink>
 
-          <div className="font-bold">Admin</div>
-          <NavLink to="/users">
-            <div className="pl-4">Users</div>
-          </NavLink>
+          {user && user.role === "admin" && (
+            <>
+              {" "}
+              <div className="font-bold">Admin</div>
+              <NavLink to="/users">
+                <div className="pl-4">Users</div>
+              </NavLink>
+            </>
+          )}
 
           <div className="font-bold">Settings</div>
           <div className="pl-4">

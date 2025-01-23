@@ -3,6 +3,7 @@ import Layout from "./Layout";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getMe } from "../features/authSlice";
+import Welcome from "../components/Welcome";
 const Dashboard = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -18,7 +19,11 @@ const Dashboard = () => {
     }
   }, [isError, navigate]);
 
-  return <Layout>lorem afsdftg</Layout>;
+  return (
+    <Layout>
+      <Welcome />
+    </Layout>
+  );
 };
 
 export default Dashboard;

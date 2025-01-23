@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
       <div className="flex">
         <Sidebar />
 
-        <div className="mt-6 px-6 ml-[10%] ">{children}</div>
+        <div className="mt-24 ml-14 px-6 pl-[10%] w-[90%]">{children}</div>
       </div>
     </React.Fragment>
   );
