@@ -11,7 +11,7 @@ const Navbar = () => {
   const logoutx = () => {
     dispatch(logout());
     dispatch(reset());
-    navigate("/");
+    navigate("/login");
   };
   return (
     <nav className="fixed w-full bg-gray-800 ">

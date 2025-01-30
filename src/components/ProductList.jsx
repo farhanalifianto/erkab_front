@@ -25,7 +25,7 @@ const ProductList = () => {
       </div>
       <div className="flex items-center justify-end w-[68%] ">
         <button
-          onClick={() => navigate("/product/add")}
+          onClick={() => navigate("/products/add")}
           className="bg-black text-white px-8 mx-6 py-2 rounded-md"
         >
           Add

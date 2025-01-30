@@ -13,7 +13,7 @@ const LoginPages = () => {
 
   useEffect(() => {
     if (user) {
-      navigate("/dashboard");
+      navigate("/");
     }
     dispatch(reset());
   }, [user, isSuccess, navigate, dispatch]);

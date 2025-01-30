@@ -15,7 +15,7 @@ const AddUser = () => {
 
   useEffect(() => {
     if (isError) {
-      navigate("/");
+      navigate("/login");
     }
     if (user && user.role !== "admin") {
       navigate("/404");
